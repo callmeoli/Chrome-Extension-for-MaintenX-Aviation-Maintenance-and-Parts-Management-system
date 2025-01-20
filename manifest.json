@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Request Id Extractor beta BN 3",
+  "version": "1.0",
+  "description": "Extract and copy codes from the page.",
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/maintenix-logo.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  }
+}

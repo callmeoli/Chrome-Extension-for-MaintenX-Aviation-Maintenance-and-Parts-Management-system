@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Extractor</title>
+  <style>
+    body {
+      width: 400px;
+      font-family: "Montserrat", Verdana, Geneva, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background: #f7f7f7;
+    }
+    header {
+      background: #99C3DD;
+      color: #494949;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #003366;
+    }
+    #logo {
+      max-width: 80%;
+      height: auto;
+    }
+    button {
+      width: 90%;
+      padding: 10px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 5px;
+      background: #0069aa;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.1s ease;
+      position: relative;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    button:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      transition: width 0.3s, height 0.3s, opacity 0.3s;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    button:active:before {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    footer {
+      background: #0069aa;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #004d99;
+      padding: 10px;
+    }
+    footer p {
+      margin: 0;
+    }
+    #result {
+      width: 90%;
+      margin: 20px 0;
+      padding: 10px;
+      background: #e6e6e6;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+      word-wrap: break-word;
+      display: none; /* Initially hide the result */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="logo" src="icons/maintenix-logo.png" alt="Maintenix Logo">
+    <h1>Request ID Extractor</h1>
+  </header>
+  <button id="extractCodes">Copy Request IDs</button>
+  <button id="openBNLinks">Open BN Links</button>
+  <button id="openEachBatchNumber">Open Each Batch Number</button>
+  <div id="result" contenteditable="true" spellcheck="false"></div> <!-- Result will be updated here -->
+  <footer>
+    <p>Made by Olana korma &copy; 2024</p>
+    <p>Linkdin <a href="https://www.linkedin.com/in/olanakorma/">Olana</a></p>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
