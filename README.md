@@ -20,3 +20,6 @@ We welcome community contributions to make this extension even better! Submit is
 
 License:
 This project is open-source and available under MIT. See the LICENSE file for more details.
+![Extension Window](icons/extension%20page.png)
+
+![Extension in Action page](icons/whole%20page.png)
